@@ -8,13 +8,14 @@ jobs:
       myName: 'fer_pm'
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - uses: actions/setup-node@v4.1.0
         with:
           node-version: 19
       - name: hellow!!!
         run: node index.js
       - name: Deploy to GitHub Pages
-        if: ${{env.myName == 'fer_pm2'}}
+        if: ${{env.myName == 'fer_pm'}}
         run: |
           echo "Mi nombre es... ${{env.myName}}"
       - name: Showing github default variables
