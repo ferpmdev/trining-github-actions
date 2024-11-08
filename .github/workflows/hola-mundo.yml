@@ -4,6 +4,8 @@ on: [push]
 
 jobs:
   deploy:
+    env:
+      myName: 'fer_pm'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -12,3 +14,6 @@ jobs:
           node-version: 19
       - name: hellow!!!
         run: node index.js
+      - name: Deploy to GitHub Pages
+        run: |
+          echo "Mi nombre es... $myName"
