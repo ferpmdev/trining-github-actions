@@ -12,5 +12,5 @@ jobs:
       - uses: actions/setup-node@v4.1.0
         with:
           node-version: 19
-      - name: hellow
+      - name: hellow!
         run: node index.js
