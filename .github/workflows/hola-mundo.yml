@@ -1,8 +1,6 @@
 name: hellow world
 
-on:
-  push:
-    branches: [reto-1]
+on: [push]
 
 jobs:
   deploy:
